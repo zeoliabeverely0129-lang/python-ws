@@ -1,12 +1,11 @@
- 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>守护地球 - 绿动未来</title>
+    <title>EcoGuard - For a Greener Future</title>
     <style>
-        /* 基础样式 */
+        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +23,7 @@
             background-color: #f9f9f9;
         }
 
-        /* 导航栏 */
+        /* Navigation */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 1rem 5%;
@@ -64,10 +63,10 @@
             color: #27ae60;
         }
 
-        /* 横幅区 */
+        /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                         url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
@@ -93,12 +92,13 @@
         }
 
         .btn {
-            padding: 12px 30px;
+            padding: 12px 35px;
             background-color: #27ae60;
             color: white;
             text-decoration: none;
             border-radius: 30px;
             transition: transform 0.3s, background-color 0.3s;
+            font-weight: bold;
         }
 
         .btn:hover {
@@ -106,7 +106,7 @@
             transform: translateY(-3px);
         }
 
-        /* 通用容器 */
+        /* Section Styling */
         section {
             padding: 80px 10%;
         }
@@ -134,7 +134,7 @@
             transform: translateX(-50%);
         }
 
-        /* 挑战展示区 - 卡片布局 */
+        /* Grid Layout for Challenges */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -168,7 +168,7 @@
             color: #27ae60;
         }
 
-        /* 行动指南 */
+        /* Action Guide Section */
         .actions {
             background-color: #eef7f2;
         }
@@ -186,19 +186,48 @@
             text-align: center;
         }
 
-        .action-item i {
-            font-size: 3rem;
-            color: #27ae60;
-            display: block;
+        .action-item .emoji {
+            font-size: 3.5rem;
             margin-bottom: 15px;
+            display: block;
         }
 
-        /* 页脚 */
+        /* Join Section */
+        #join {
+            text-align: center;
+            background-color: #27ae60;
+            color: white;
+            padding: 100px 10%;
+        }
+
+        #join h2 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .subscribe-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .subscribe-form input {
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: none;
+            width: 350px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        /* Footer */
         footer {
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .footer-links {
@@ -207,120 +236,124 @@
 
         .footer-links a {
             color: #bdc3c7;
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
         }
 
-        /* 响应式适配 */
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            nav ul { display: none; } /* 移动端可进一步优化为汉堡菜单 */
+            nav ul { display: none; }
+            .subscribe-form input { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 导航栏 -->
+    <!-- Navigation Bar -->
     <header>
-        <div class="logo">🌿 GreenLife</div>
+        <div class="logo">🌿 EcoGuard</div>
         <nav>
             <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#issues">面临挑战</a></li>
-                <li><a href="#solutions">我们可以做什么</a></li>
-                <li><a href="#join">加入我们</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#join">Join Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 横幅区 -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>保护环境，从我做起</h1>
-        <p>地球不是我们从祖先那里继承来的，而是我们从子孙后代那里借来的。每一份努力，都是对大自然最深情的告白。</p>
-        <a href="#issues" class="btn">了解更多</a>
+        <h1>Protect Nature, Save Our Future</h1>
+        <p>The Earth is not an inheritance from our ancestors, but a loan from our children. Every small action you take today creates a ripple effect for tomorrow.</p>
+        <a href="#challenges" class="btn">Explore More</a>
     </section>
 
-    <!-- 环境挑战区 -->
-    <section id="issues">
+    <!-- Environmental Challenges -->
+    <section id="challenges">
         <div class="section-title">
-            <h2>我们面临的挑战</h2>
+            <h2>The Challenges We Face</h2>
         </div>
         <div class="grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="气候变化">
+                <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Climate Change">
                 <div class="card-content">
-                    <h3>气候变暖</h3>
-                    <p>温室气体排放导致全球气温上升，冰川融化，极端天气频发。我们需要减少碳足迹。</p>
+                    <h3>Climate Change</h3>
+                    <p>Rising greenhouse gas emissions are leading to global warming, melting glaciers, and frequent extreme weather events.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1526951521990-620dc14c214b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="塑料污染">
+                <img src="https://images.unsplash.com/photo-1526951521990-620dc14c214b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Plastic Pollution">
                 <div class="card-content">
-                    <h3>塑料危机</h3>
-                    <p>每年数百万吨塑料进入海洋，威胁海洋生物，最终通过食物链影响人类健康。</p>
+                    <h3>Plastic Crisis</h3>
+                    <p>Millions of tons of plastic enter our oceans every year, harming marine life and eventually entering the human food chain.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="森林砍伐">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Deforestation">
                 <div class="card-content">
-                    <h3>森林流失</h3>
-                    <p>森林被称为“地球之肺”，大规模的商业砍伐正在破坏生物多样性并加速变暖。</p>
+                    <h3>Deforestation</h3>
+                    <p>Forests are the "lungs of the Earth." Mass deforestation destroys biodiversity and accelerates global warming.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 行动指南区 -->
+    <!-- Action Guide Section -->
     <section class="actions" id="solutions">
         <div class="section-title">
-            <h2>开启环保生活</h2>
+            <h2>Start a Sustainable Life</h2>
         </div>
         <div class="action-list">
             <div class="action-item">
-                <div style="font-size: 3rem;">♻️</div>
-                <h3>垃圾分类</h3>
-                <p>正确分类废弃物，让资源进入循环体系，减少填埋和焚烧。</p>
+                <span class="emoji">♻️</span>
+                <h3>Recycle & Reuse</h3>
+                <p>Sort your waste properly to ensure resources enter the circular economy instead of landfills.</p>
             </div>
             <div class="action-item">
-                <div style="font-size: 3rem;">🚲</div>
-                <h3>绿色出行</h3>
-                <p>多使用公共交通、骑行或步行，减少私家车尾气排放。</p>
+                <span class="emoji">🚲</span>
+                <h3>Green Travel</h3>
+                <p>Opt for public transport, cycling, or walking to reduce your individual carbon footprint.</p>
             </div>
             <div class="action-item">
-                <div style="font-size: 3rem;">🔌</div>
-                <h3>节约能源</h3>
-                <p>随手关灯，使用节能电器，在点滴中减少能源消耗。</p>
+                <span class="emoji">🔌</span>
+                <h3>Save Energy</h3>
+                <p>Switch off lights when not in use and use energy-efficient appliances to conserve power.</p>
             </div>
             <div class="action-item">
-                <div style="font-size: 3rem;">🛍️</div>
-                <h3>减少塑料</h3>
-                <p>购物自带环保袋，拒绝一次性餐具和塑料瓶。</p>
+                <span class="emoji">🛍️</span>
+                <h3>Reduce Plastic</h3>
+                <p>Bring your own bags and say no to single-use plastics like straws and bottles.</p>
             </div>
         </div>
     </section>
 
-    <!-- 加入我们 -->
-    <section id="join" style="text-align: center; background-color: #27ae60; color: white;">
-        <h2 style="margin-bottom: 20px;">准备好改变了吗？</h2>
-        <p style="margin-bottom: 30px; font-size: 1.2rem;">加入我们的环保志愿者社区，获取最新的环保资讯和线下活动通知。</p>
-        <form style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-            <input type="email" placeholder="输入您的电子邮箱" style="padding: 12px 20px; border-radius: 25px; border: none; width: 300px; outline: none;">
-            <button type="submit" class="btn" style="background-color: #2c3e50; border: none; cursor: pointer;">立即订阅</button>
+    <!-- Join Us Section -->
+    <section id="join">
+        <h2>Ready to Make a Change?</h2>
+        <p>Join our community of eco-volunteers to receive the latest environmental news and event updates.</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn" style="background-color: #2c3e50; border: none; cursor: pointer;">Subscribe Now</button>
         </form>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="#">隐私政策</a>
-            <a href="#">关于我们</a>
-            <a href="#">联系合作</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Partners</a>
         </div>
-        <p>&copy; 2023 绿动未来环保组织. 版权所有.</p>
-        <p style="font-size: 0.8rem; color: #7f8c8d; margin-top: 10px;">保护环境，是为了更好的明天。</p>
+        <p>&copy; 2023 EcoGuard Organization. All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: #7f8c8d; margin-top: 10px;">Protecting the environment for a better tomorrow.</p>
     </footer>
 
 </body>
 </html>
-
- 
